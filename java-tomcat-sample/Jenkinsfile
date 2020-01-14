@@ -11,11 +11,11 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
-	stage('Deploy in Staging Environment'){
-	    steps{
-		build job: 'deploy-appl-staging'
-	    }
-	  }
-        }
+	    stage('deploy in staging env'){
+		steps{
+		    build job: 'deploy-appl-staging'
+		}
+            }
+	}
     }
 }
