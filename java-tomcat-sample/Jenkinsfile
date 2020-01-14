@@ -12,7 +12,8 @@ pipeline {
                 }
             }
 	stage{'Deploy in Staging Environment'){
-	    build job: 'deploy-appl-staging'
+	    steps{
+		build job: 'deploy-appl-staging'
 	    }
         }
     }
